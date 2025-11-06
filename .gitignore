@@ -1,0 +1,55 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in volume root
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# macOS metadata
+*.icloud
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env/
+.venv/
+.envrc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build / cache
+build/
+dist/
+*.log
+*.out
+
+# PDFs or generated files
+*.pdf
+
+# OS temp files
+*~
+*.swp
+
+# Datasets (too heavy to go to the repository)
+data/
