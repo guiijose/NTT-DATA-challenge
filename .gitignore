@@ -53,3 +53,7 @@ dist/
 
 # Datasets (too heavy to go to the repository)
 data/
+
+
+# Zip files
+*.zip
