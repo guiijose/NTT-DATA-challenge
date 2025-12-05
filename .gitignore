@@ -56,3 +56,6 @@ dist/
 
 # Zip files
 *.zip
+
+# Models
+models/
