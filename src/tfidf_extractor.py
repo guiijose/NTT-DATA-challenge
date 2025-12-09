@@ -12,6 +12,25 @@ def prGreen(text : str) -> None:
         text (str): The text to be printed.
     """
     print(f"\033[92m{text}\033[0m")
+
+def is_valid_csv(file_path):
+    """Check if file exists and is a valid CSV with data (not a Git LFS pointer)."""
+    if not os.path.exists(file_path):
+        return False
+    try:
+        # Check if it's a Git LFS pointer
+        with open(file_path, 'r', encoding='utf-8') as f:
+            first_line = f.readline()
+            if first_line.startswith('version https://git-lfs.github.com'):
+                return False
+        
+        # Try to read the CSV and check if it has columns
+        df = pd.read_csv(file_path, nrows=1)
+        if df.empty or 'Label' not in df.columns:
+            return False
+        return True
+    except Exception:
+        return False
     
 def load_and_vectorize(
         train_path : str,
