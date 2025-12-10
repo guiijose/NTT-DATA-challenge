@@ -14,7 +14,9 @@ def prGreen(text : str) -> None:
     print(f"\033[92m{text}\033[0m")
 
 def is_valid_csv(file_path):
-    """Check if file exists and is a valid CSV with data (not a Git LFS pointer)."""
+    """
+    Check if file exists and is a valid CSV with data (not a Git LFS pointer).
+    """
     if not os.path.exists(file_path):
         return False
     try:
