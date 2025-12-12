@@ -7,13 +7,32 @@ Data processing pipeline for the Machine Learning merit prize. This repository e
 ```bash
 .
 ├── README.md
-├── data/
-│   ├── processed/              # Processed datasets (CSV files)
-│   └── raw/                    # Raw datasets
-├── requirements.txt            # Python dependencies
-└── src/
-    ├── main.ipynb              # Notebook for model training and analysis
-    └── tfidf_extractor.py      # Data processing script
+├── data
+│   ├── processed
+│   │   ├── test_features.csv           # TF-IDF encoded datasets
+│   │   ├── train_features.csv
+│   │   └── validation_features.csv
+│   ├── raw
+│   │   ├── test.csv                    # Raw datasets
+│   │   ├── train.csv
+│   │   └── validation.csv
+│   └── vectorizer.pkl                  # Serialized vectorizer object
+├── models                              # Serialized model objects
+│   ├── decision_tree.pkl
+│   ├── gaussian_nb.pkl
+│   ├── lr_l1.pkl
+│   ├── lr_l2.pkl
+│   └── mlp.pkl
+├── requirements.txt
+└── src                                 # Notebooks
+    ├── clustering.ipynb
+    ├── model_evaluation.ipynb
+    ├── model_interpretation.ipynb
+    ├── model_training.ipynb
+    └── tfidf_extractor.py              # TF-DF encoder scripts
+
+6 directories, 19 files
+
 ```
 
 ## Setup
@@ -62,3 +81,5 @@ python src/tfidf_extractor.py \
   --validation_path data/raw/validation.csv \
   --output_folder data/processed
 ```
+
+or you can run the necessary functions in the `model_training.ipynb` notebook.
